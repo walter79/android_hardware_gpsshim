@@ -215,7 +215,7 @@ static int  init_wrapper(GpsCallbacks* callbacks) {
 #ifdef NO_AGPS
     originalCallbacks->set_capabilities_cb(0);
 #else
-    originalCallbacks->set_capabilities_cb(GPS_CAPABILITY_MSB|GPS_CAPABILITY_MSA);
+    originalCallbacks->set_capabilities_cb(GPS_CAPABILITY_SCHEDULING|GPS_CAPABILITY_MSB|GPS_CAPABILITY_MSA);
 #endif
     return originalGpsInterface->init(&oldCallbacks);
 }
